@@ -58,3 +58,7 @@ to stopp the running docker container
 ```
 docker stop <container_id>
 ``` 
+To install he required libraries
+```
+python setup.py install
+```
