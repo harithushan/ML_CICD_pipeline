@@ -1,53 +1,94 @@
-## ML_CICD_pipeline
-### softwares and accounts requirements
+## Start Machine Learning project.
 
-1. [Github Account](https://github.com/)
-1. [Heroku Account](www.heroku.com)
-1. [VS Code IDE](https://code.visualstudio.com/)
-1. [GIT Cli](https://git-scm.com/docs/gitcli)
+### Software and account Requirement.
 
-creating comda environment
+1. [Github Account](https://github.com)
+2. [Heroku Account](https://dashboard.heroku.com/login)
+3. [VS Code IDE](https://code.visualstudio.com/download)
+4. [GIT cli](https://git-scm.com/downloads)
+5. [GIT Documentation](https://git-scm.com/docs/gittutorial)
+
+
+Creating conda environment
 ```
-conda crate -p venv python==3.7 -y
+conda create -p venv python==3.7 -y
 ```
 ```
 conda activate venv/
 ```
+OR 
+```
+conda activate venv
+```
+
 ```
 pip install -r requirements.txt
 ```
-git commands
+
+To Add files to git
 ```
 git add .
-git commit -m "commit messege"
+```
+
+OR
+```
+git add <file_name>
+```
+
+> Note: To ignore file or folder from git we can write name of file/folder in .gitignore file
+
+To check the git status 
+```
+git status
+```
+To check all version maintained by git
+```
+git log
+```
+
+To create version/commit all changes by git
+```
+git commit -m "message"
+```
+
+To send version/changes to github
+```
 git push origin main
 ```
-Requirements for deployment
-```
-Heroku app name     : ml-app-pipeline
-Heroku mail id      : harithushan3@gmail.com
-Heroku API key      : 3f9fdd13-b91d-41ee-8fd7-3ded1235af66  
-```
-Build docker image
-```
-docker build -t  <image_name>:<tagname> .
-docker build -t  al_app_pipeline:latest .
-```
->Note : Name for docker image should be lowercase
 
-to list docker image
+To check remote url 
+```
+git remote -v
+```
+
+To setup CI/CD pipeline in heroku we need 3 information
+1. HEROKU_EMAIL = anishyadav7045075175@gmail.com
+2. HEROKU_API_KEY = <>
+3. HEROKU_APP_NAME = ml-regression-app
+
+BUILD DOCKER IMAGE
+```
+docker build -t <image_name>:<tagname> .
+```
+> Note: Image name for docker must be lowercase
+
+
+To list docker image
 ```
 docker images
 ```
-run docker image
+
+Run docker image
 ```
-docker run -p 5000:5000  -e PORT=5000 ID
+docker run -p 5000:5000 -e PORT=5000 f8c749e73678
 ```
-to check the running docker container
+
+To check running container in docker
 ```
 docker ps
 ```
-to stopp the running docker container
-```
 
-``` 
+Tos stop docker conatiner
+```
+docker stop <container_id>
+```
