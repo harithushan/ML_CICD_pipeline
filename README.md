@@ -6,9 +6,7 @@
 1. [VS Code IDE](https://code.visualstudio.com/)
 1. [GIT Cli](https://git-scm.com/docs/gitcli)
 
-```
 creating comda environment
-```
 ```
 conda crate -p venv python==3.7 -y
 ```
@@ -18,6 +16,7 @@ conda activate venv/
 ```
 pip install -r requirements.txt
 ```
+Requirements for deployment
 ```
 Heroku app name     : ml-app-pipeline
 Heroku mail id      : harithushan3@gmail.com
