@@ -1,15 +1,13 @@
 from flask import Flask
+from housing.logger import logging
 
 app=Flask(__name__)
 
 
 @app.route("/",methods=['GET','POST'])
 def index():
-    return """CI CD pipeline has been established.
-    just modified the file adian 
-    so i have reached the level succesfully 
-    am so excited
-    love you"""
+    logging.info("We are testing the logging module")
+    return "CICD pipeline has been established"
 
 
 if __name__=="__main__":

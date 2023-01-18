@@ -1,5 +1,6 @@
 from setuptools import setup,find_packages
 from typing import List
+import setuptools
 
 #Declaring  variables for setup function
 Project_name ="housingpredictor"
@@ -19,11 +20,11 @@ def get_requirements_list()->List[str]:
         return requirement_file.readlines().remove("-e .") #removing "-e ." here because find_packages() will also do the job of this
 
 # packages=find_packages()# can also be used
-setup(
-name=Project_name,
-version=Version,
-author=Author,
-description=Description,
-packages=find_packages()#Packages#["housing"]
-install_requires =get_requirements_list()
+setuptools(
+    name=Project_name,
+    version=Version,
+    author=Author,
+    description=Description,
+    packages=find_packages(),#Packages#["housing"]
+    install_requires =get_requirements_list()
 )
