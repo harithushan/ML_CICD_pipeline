@@ -54,7 +54,7 @@ to check the running docker container
 ```
 docker ps
 ```
-to stopp the running docker container
+to stop the running docker container
 ```
 docker stop <container_id>
 ``` 
